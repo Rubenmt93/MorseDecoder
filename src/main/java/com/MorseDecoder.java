@@ -4,16 +4,19 @@ public class MorseDecoder {
 
 
     public Object decode(String s) {
-        if(s.equals(".-")){
+        switch (s){
+            case ".-":
+                return "A";
+            case "-...":
+                return "B";
+            case "-.-.":
+                return "C";
+            default:
+                return null;
+        }
 
-            return "A";
-        }
-        if(s.equals("-...")){
-            return "B";
-        }
-        if(s.equals("-.-.")){
-            return "C";
-        }
-        return null;
     }
 }
+
+
+
