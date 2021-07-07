@@ -11,6 +11,9 @@ public class MorseDecoder {
         if(s.equals("-...")){
             return "B";
         }
+        if(s.equals("-.-.")){
+            return "C";
+        }
         return null;
     }
 }
