@@ -1,66 +1,40 @@
 package com;
 
-public class MorseDecoder {
+import java.util.HashMap;
+import java.util.Map;
 
+public class MorseDecoder {
+    private static final Map<String,String> MorseCode = new HashMap<>(){{
+    put(".-", "A");
+    put(".-", "A");
+    put("-...", "B");
+    put("-.-.", "C");
+    put("-..", "D");
+    put(".", "E");
+    put("..-.", "F");
+    put("--.", "G");
+    put("....", "H");
+    put("..", "I");
+    put(".---", "J");
+    put("-.-", "K");
+    put(".-..", "L");
+    put("--", "M");
+    put("-.", "N");
+    put("---", "O");
+    put(".--.", "P");
+    put("--.-", "Q");
+    put(".-.", "R");
+    put("...", "S");
+    put("-", "T");
+    put("..-", "U");
+    put("...-", "V");
+    put(".--", "W");
+    put("-..-", "X");
+    put("-.--", "Y");
+    put("--..", "Z");}};
 
     public Object decode(String s) {
-        switch (s){
-            case ".-":
-                return "A";
-            case "-...":
-                return "B";
-            case "-.-.":
-                return "C";
-            case "-..":
-                return "D";
-            case ".":
-                return "E";
-            case "..-.":
-                return "F";
-            case"--.":
-                return "G";
-            case "....":
-                return "H";
-            case "..":
-                return "I";
-            case ".---":
-                return "J";
-            case "-.-":
-                return "K";
-            case ".-..":
-                return "L";
-            case "--":
-                return "M";
-            case "-.":
-                return "N";
-            case "---":
-                return "O";
-            case ".--.":
-                return "P";
-            case "--.-":
-                return "Q";
-            case ".-.":
-                return "R";
-            case "...":
-                return "S";
-            case "-":
-                return "T";
-            case "..-":
-                return "U";
-            case "...-":
-                return "V";
-            case".--":
-                return "W";
-            case "-..-" :
-                return "X";
-            case "-.--" :
-                return "Y";
-            case "--..":
-                return "Z";
-            default:
-                return null;
-        }
-
+        return MorseCode.get(s);
     }
 }
 
