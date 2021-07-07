@@ -31,8 +31,17 @@ public class MorseDecoder {
     put(".--", "W");
     put("-..-", "X");
     put("-.--", "Y");
-    put("--..", "Z");}};
-
+    put("--..", "Z");
+    put("-----", "0");
+    put(".----", "1");
+    put("..---", "2");
+    put("...--", "3");
+    put("....-", "4");
+    put(".....", "5");
+    put("-....", "6");
+    put("--...", "7");
+    put("---..", "8");
+    put("----.", "9");}};
     public Object decode(String s) {
         return MorseCode.get(s);
     }

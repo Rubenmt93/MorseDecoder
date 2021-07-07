@@ -19,7 +19,7 @@ public class MorseDecoderTest {
         assertEquals(morseDecoder.decode("-.-."),"C");
     }
     @Test
-    public void getMorseDecoderTestAlphaBet() {
+    public void MorseDecoderTestAlphaBet() {
         assertEquals(morseDecoder.decode(".-"),"A");
         assertEquals(morseDecoder.decode("-..."),"B");
         assertEquals(morseDecoder.decode("-.-."),"C");
@@ -45,6 +45,19 @@ public class MorseDecoderTest {
         assertEquals(morseDecoder.decode("-..-"), "X");
         assertEquals(morseDecoder.decode("-.--"), "Y");
         assertEquals(morseDecoder.decode("--.."), "Z");
+    }
+    @Test
+    public void MorseDecoderTestNumbers(){
+        assertEquals(morseDecoder.decode("-----"), "0");
+        assertEquals(morseDecoder.decode(".----"), "1");
+        assertEquals(morseDecoder.decode("..---"), "2");
+        assertEquals(morseDecoder.decode("...--"), "3");
+        assertEquals(morseDecoder.decode("....-"), "4");
+        assertEquals(morseDecoder.decode("....."), "5");
+        assertEquals(morseDecoder.decode("-...."), "6");
+        assertEquals(morseDecoder.decode("--..."), "7");
+        assertEquals(morseDecoder.decode("---.."), "8");
+        assertEquals(morseDecoder.decode("----."), "9")
     }
 
     @Test
