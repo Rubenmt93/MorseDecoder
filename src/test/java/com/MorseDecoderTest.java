@@ -3,6 +3,7 @@ package com;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
 
 public class MorseDecoderTest {
     final MorseDecoder morseDecoder= new MorseDecoder();
@@ -57,11 +58,32 @@ public class MorseDecoderTest {
         assertEquals(morseDecoder.decode("-...."), "6");
         assertEquals(morseDecoder.decode("--..."), "7");
         assertEquals(morseDecoder.decode("---.."), "8");
-        assertEquals(morseDecoder.decode("----."), "9")
+        assertEquals(morseDecoder.decode("----."), "9");
     }
-
+    @Test
+    public  void MorseDecoderTestSymbols(){
+        assertEquals(morseDecoder.decode(".-.-.-"), ".");
+        assertEquals(morseDecoder.decode("--..--"), ",");
+        assertEquals(morseDecoder.decode("..--.."), "?");
+        assertEquals(morseDecoder.decode(".----."), "'");
+        assertEquals(morseDecoder.decode("-.-.--"), "!");
+        assertEquals(morseDecoder.decode("-..-."), "/");
+        assertEquals(morseDecoder.decode("-.--."), "(");
+        assertEquals(morseDecoder.decode("-.--.-"), ")");
+        assertEquals(morseDecoder.decode(".-..."), "&");
+        assertEquals(morseDecoder.decode("---..."), ",");
+        assertEquals(morseDecoder.decode("-.-.-."), ";");
+        assertEquals(morseDecoder.decode("-...-"), "=");
+        assertEquals(morseDecoder.decode(".-.-."), "+");
+        assertEquals(morseDecoder.decode("-....-"), "-");
+        assertEquals(morseDecoder.decode("..--.-"), "_");
+        assertEquals(morseDecoder.decode(".-..-."), "\"");
+        assertEquals(morseDecoder.decode("...-..-"), "$");
+        assertEquals(morseDecoder.decode(".--.-."), "@");
+        assertEquals(morseDecoder.decode("...---..."), "SOS");
+    }
     @Test
     public void getMorseDecoderTestFailed() {
-        assertEquals(morseDecoder.decode("#"), null);
+        assertNull(morseDecoder.decode("#"));
     }
 }
