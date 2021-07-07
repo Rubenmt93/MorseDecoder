@@ -8,6 +8,9 @@ public class MorseDecoder {
 
             return "A";
         }
+        if(s.equals("-...")){
+            return "B";
+        }
         return null;
     }
 }

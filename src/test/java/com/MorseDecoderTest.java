@@ -10,6 +10,11 @@ public class MorseDecoderTest {
         MorseDecoder morseDecoder= new MorseDecoder();
         assertEquals(morseDecoder.decode(".-"), "A");
     }
+    @Test
+    public void MorseDecoderTestB(){
+        MorseDecoder morseDecoder= new MorseDecoder();
+        assertEquals(morseDecoder.decode("-..."),"B");
+    }
 
 
 }
