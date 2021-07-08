@@ -61,8 +61,17 @@ public class MorseDecoder {
     put("...-..-", "$");
     put(".--.-.", "@");
     put("...---...", "SOS");}};
-    public Object decode(String s) {
+    public String decode(String s) {
         return MorseCode.get(s);
+    }
+
+    public String decodeWord(String word) {
+      String result="";
+      String[] arrayWord =word.split(" ");
+      for (int i=0; i< arrayWord.length; i++){
+          result+=decode(arrayWord[i]);
+        }
+      return result;
     }
 }
 

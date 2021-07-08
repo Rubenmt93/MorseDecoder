@@ -83,7 +83,11 @@ public class MorseDecoderTest {
         assertEquals(morseDecoder.decode("...---..."), "SOS");
     }
     @Test
-    public void getMorseDecoderTestFailed() {
+    public void MorseDecoderTestFailed() {
         assertNull(morseDecoder.decode("#"));
+    }
+    @Test
+    public void MorseDecoderWordTest(){
+        assertEquals(morseDecoder.decodeWord(".... --- .-.. .-"),"HOLA");
     }
 }
